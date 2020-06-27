@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <!--  !*!*!*!*! WARNING !*!*!*!*! WARNING !*!*!*!*! WARNING !*!*!*!*! WARNING  -->
   <link rel="stylesheet" href="style.css"/>
-  <script src="index.js"></script>
+ 
   <title>JS & DOM Practice</title>
 </head>
 <body>
@@ -18,8 +18,22 @@
       <label for="animation-name">Animation Name</label><br>
       <input type="animation-name" id="animation-name" name="animation-name" value="" onkeyup="setAnimationName(this.value)" /><br>
       <label for="element-color">Font Color</label><br>
-      <input type="element-color" id="element-color" name="element-color" value="" onkeyup="setElementColor(this.value)" /><br>
+      <input type="color" id="element-color" name="color-picker" value="" onchange="setElementColor(this.value)" /><br>
+      <label for="element-message">Message</label><br>
+      <input type="element-message" id="message" name="element-message" value="" onkeyup="setElementMessage(this.value)" /><br>
       <input type="reset"/>
+      <input type="radio" id="h1" name="elements" value="h1" onclick="setElementSize(this.value)" /><br>     
+      <label for="h1">H1</label><br>     
+      <input type="radio" id="h2" name="elements" value="h2" onclick="setElementSize(this.value)" /><br>     
+      <label for="h2">H2</label><br>      
+      <input type="radio" id="h3" name="elements" value="h3" onclick="setElementSize(this.value)" /><br>     
+      <label for="h3">H3</label>
+      <input type="radio" id="h4" name="elements" value="h4" onkeyup="setElementSize(this.value)" /><br>     
+      <label for="h4">H4</label><br>      
+      <input type="radio" id="h5" name="elements" value="h5" onclick="setElementSize(this.value)" /><br>    
+      <label for="h5">H5</label><br>      
+      <input type="radio" id="h6" name="elements" value="h6" onclick="setElementSize(this.value)" /><br>     
+      <label for="h6">H6</label>
     </form>
     <button onclick="createNewElement()">Create New Element</button>
     <section id="element-collector"></section>
@@ -47,5 +61,6 @@
     slideOutDown	slideOutLeft	slideOutRight	slideOutUp
     heartBeat
   </marquee>
+  <script src="index.js"></script>
 </body>
 </html>
